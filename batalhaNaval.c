@@ -9,6 +9,57 @@ int main() {
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+    // Definições para o tabuleiro e navios
+
+
+// Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
+// Siga os comentários para implementar cada parte do desafio.
+
+    // Nível Novato - Posicionamento dos Navios
+    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
+    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
+    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+    // Definições para o tabuleiro e navios
+
+    int AGUA = 0;
+    int NAVIO = 3;
+    
+
+    // Declaração e inicialização do tabuleiro com água
+    int tabuleiro[10][10];
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            tabuleiro[i][j] = AGUA;
+        }
+    }
+
+    // Define as posições dos navios (sem validação por simplicidade)
+    // Navio horizontal
+    tabuleiro[2][3] = NAVIO;
+    tabuleiro[2][4] = NAVIO;
+    tabuleiro[2][5] = NAVIO;
+
+    // Navio vertical
+    tabuleiro[5][1] = NAVIO;
+    tabuleiro[6][1] = NAVIO;
+    tabuleiro[7][1] = NAVIO;
+
+    // Exibe o tabuleiro com coordenadas alfabéticas na linha
+    printf("  ");
+    for (int j = 0; j < 10; j++) {
+        printf("%d ", j);
+    }
+    printf("\n");
+    for (int i = 0; i < 10; i++) {
+        printf("%c ", 'A' + i); // Imprime a letra correspondente à linha
+        for (int j = 0; j < 10; j++) {
+            printf("%d ", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
